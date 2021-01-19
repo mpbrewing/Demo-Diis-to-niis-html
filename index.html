@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Diis To Niis</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="header">
+			<h1>
+				<img src="images/logo2.png" alt="Diis To Niis" class="logo" draggable="false"/>
+			</h1>
+		</div>
+		<nav class="nav">
+			<div class="nav__links">
+				<a class="nav__link" href="#" id = "btnNav">
+					<i class="icon-operations icon-details"></i>
+					Operations
+				</a>
+				<a class="nav__link nav__link--active" href="#" id = "btnNav1">
+					<i class="icon-convert icon-details"></i>
+					Convert
+				</a>
+				<a class="nav__link" href="#" id = "btnNav2">
+					<i class="icon-history icon-details"></i>
+					History
+				</a>
+			</div>
+		</nav>
+		<div>
+			
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const nav = document.querySelector(".nav__link");
+				const nav1 = document.querySelector("#btnNav");
+				const nav2 = document.querySelector("#btnNav1");
+				const nav3 = document.querySelector("#btnNav2");
+				
+				document.querySelector("#btnNav").addEventListener("click", () => {
+					nav.classList.add("nav__link--active");
+					nav2.classList.remove("nav__link--active");
+					nav3.classList.remove("nav__link--active");
+				});
+				
+				document.querySelector("#btnNav1").addEventListener("click", () => {
+					nav2.classList.add("nav__link--active");
+					nav1.classList.remove("nav__link--active");
+					nav3.classList.remove("nav__link--active");
+				});
+				
+				document.querySelector("#btnNav2").addEventListener("click", () => {
+					nav3.classList.add("nav__link--active");
+					nav2.classList.remove("nav__link--active");
+					nav1.classList.remove("nav__link--active");
+				});
+				
+			});
+		</script>
+	</body>
+</html>
