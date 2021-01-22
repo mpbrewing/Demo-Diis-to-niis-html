@@ -43,6 +43,56 @@
     			<input id="url" type="text" max="1000"/>
   			</div>
 		</div>
+		<div class="screen">
+			<div class="leftConvert">
+				<form class="formStyle">
+					<p class="pUpdate">DIIS Request</p>
+					<textarea class = "textAreaStyle outline" type="text" name="diisRequest" id="diisRequest" cols="60" rows="18"></textarea>
+				</form>
+				<!--
+				<form class="buttonForm">
+					<button class="buttonStyle">Convert DIIS to NIIS</button>
+					<i class="buttonImage"></i>
+				</form> -->
+				<a class="customB" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)" id="b1">
+					<i class="buttonStyle icon-details" id="icon1"></i>
+					Convert DIIS to NIIS
+				</a>
+				<form>
+					<p class="pUpdate">NIIS Json Request</p>
+					<textarea class = "textAreaStyle outline" name="niisJsonRequest" cols="60" rows="18"></textarea>
+				</form>
+			</div>
+			<div class="middle"> 
+				<a class="customMiddle" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b2">
+					<i class="icon-details middle1" id="icon2"></i>
+					Submit to DIIS Host
+				</a>
+				<a class="customMiddle" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b3">
+					<i class="icon-details middle1" id="icon3"></i>
+					Submit to NIIS Service
+				</a>
+			</div>
+			<div class="leftConvert">
+				<form class="formStyle">
+					<p class="pUpdate">DIIS Response</p>
+					<textarea class = "textAreaStyle outline" type="text" name="diisResponse" id="diisResponse" cols="60" rows="18"></textarea>
+				</form>
+				<!--
+				<form class="buttonForm">
+					<button class="buttonStyle">Convert DIIS to NIIS</button>
+					<i class="buttonImage"></i>
+				</form> -->
+				<a class="customB" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b4">
+					<i class="icon-details buttonStyle" id="icon4"></i>
+					Convert DIIS to NIIS
+				</a>
+				<form>
+					<p class="pUpdate">NIIS Json Response</p>
+					<textarea class = "textAreaStyle outline" name="niisJsonResponset" cols="60" rows="18"></textarea>
+				</form>
+			</div>
+		</div>
 		<script src="base.js"></script>
 	</body>
 </html>
