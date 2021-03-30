@@ -16,39 +16,34 @@ body {
   height: 40px;
   width: 40px;
   display: inline-block;
-  /* Other styles here */
 }
 .icon-operations {
   background: url("../images/operations.png");
-  background-size: 40px 40px;
+  background-size: 40px;
   background-repeat: no-repeat;
 }
 .icon-convert {
   background: url("../images/convert.png");
-  background-size: 40px 40px;
+  background-size: 40px;
   background-repeat: no-repeat;
 }
 .icon-history {
   background: url("../images/history.png");
-  background-size: 40px 40px;
+  background-size: 40px;
   background-repeat: no-repeat;
 }
 .nav__links {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  height: 24vh;
-  width: 250px;
-  background: #FFFFFF;
+  height: 20%;
+  width: 14%;
   transform: translateY(80px);
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  /*border-style: solid;
-	border-width: 5px;
-	border-color: black;*/
 }
 .nav__link {
   transition-duration: 0.4s;
@@ -58,7 +53,7 @@ body {
   color: #000000;
   filter: invert(98%) sepia(0%) saturate(9%) hue-rotate(162deg) brightness(90%) contrast(93%);
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.5vw;
   text-decoration: none;
   padding: 12px 15px;
   margin-top: 10px;
@@ -78,7 +73,7 @@ body {
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.5vw;
   text-decoration: none;
   padding: 12px 15px;
   font-family: "Nexa Regular", "Nexa Bold";
@@ -95,8 +90,8 @@ body {
   position: absolute;
   top: 340px;
   left: 10px;
-  height: 34vh;
-  width: 245px;
+  height: 320px;
+  width: 13%;
   text-align: center;
   font-family: "Nexa Regular", "Nexa Bold";
   font-style: normal;
@@ -112,7 +107,6 @@ label {
   color: #cccccc;
   position: absolute;
   top: 10px;
-  ;
   font-size: 22px;
   margin: 10px;
   padding: 0 10px;
@@ -131,9 +125,6 @@ input[type=text] {
   border-radius: 8px;
   font-size: 15px;
   color: #333333;
-  /* font-family: "Nexa Regular", "Nexa Bold";
-  font-style: normal;
-  src: url("../NexaRegular.ttf"); */
 }
 input[type=text]:focus {
   outline: none;
@@ -143,10 +134,10 @@ input[type=text]:focus {
 }
 .screen {
   position: absolute;
-  top: 0px;
-  left: 298px;
-  height: 86vh;
-  width: 1450px;
+  top: 0%;
+  left: 16%;
+  height: 87%;
+  width: 83%;
   transform: translateY(95px);
   text-align: center;
   font-family: "Nexa Regular", "Nexa Bold";
@@ -156,11 +147,12 @@ input[type=text]:focus {
   border-radius: 20px;
 }
 .formStyle {
-  padding-bottom: 20px;
+  padding-bottom: 1vh;
 }
 .textAreaStyle {
   resize: none;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
+  padding-bottom: 1vh;
   /*border: none;*/
   overflow: auto;
   outline: none;
@@ -173,8 +165,13 @@ input[type=text]:focus {
   max-height: 100%;
   font-size-adjust: auto;
 }
+
+textarea{
+  height: 30vh;
+}
+
 .pUpdate {
-  font-size: 20px;
+  font-size: 2vh;
 }
 .buttonForm {
   padding-top: 30px;
@@ -184,28 +181,30 @@ input[type=text]:focus {
   float: left;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 10px;
+  /*padding-top: 1vh;
+  padding-bottom: 1vh;*/
+  width: 34%;
+  height: 97%;
 }
 .buttonStyle {
   background: url("../images/downarrow.png");
   background-size: 40px 40px;
   background-repeat: no-repeat;
-  margin-right: 42px;
-  margin-left: 31px;
+  margin-right: 6%;
+  margin-left: 2%;
 }
 .customB {
   transition-duration: 0.4s;
   transition: ease-in-out;
   display: flex;
   align-items: center;
-  /*text-align: center;*/
   color: #000000;
   filter: invert(61%) sepia(56%) saturate(461%) hue-rotate(59deg) brightness(98%) contrast(88%);
-  /*filter: invert(98%) sepia(0%) saturate(9%) hue-rotate(162deg) brightness(90%) contrast(93%);*/
   font-weight: bold;
-  font-size: 26px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-decoration: none;
-  padding: 12px 15px;
+  /*padding: 12px 15px;*/
+  padding: 1vh 2vw;
   margin-top: 10px;
   font-family: "Nexa Regular", "Nexa Bold";
   font-style: normal;
@@ -213,6 +212,7 @@ input[type=text]:focus {
   border-radius: 15px;
   border-style: solid;
   border-width: 2px;
+  height: 4vh;
 }
 .middle {
   float: left;
@@ -236,10 +236,8 @@ input[type=text]:focus {
   transition: ease-in-out;
   display: flex;
   align-items: center;
-  /*text-align: center;*/
   color: #000000;
   filter: invert(61%) sepia(56%) saturate(461%) hue-rotate(59deg) brightness(98%) contrast(88%);
-  /*filter: invert(98%) sepia(0%) saturate(9%) hue-rotate(162deg) brightness(90%) contrast(93%);*/
   font-weight: bold;
   font-size: 22px;
   text-decoration: none;
@@ -253,6 +251,9 @@ input[type=text]:focus {
   border-style: solid;
   border-width: 2px;
 }
+
+
+
 /*
 .buttonStyle {
   font-family: "Nexa Regular", "Nexa Bold";

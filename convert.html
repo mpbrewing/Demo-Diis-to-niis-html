@@ -1,98 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Diis To Niis</title>
 		<link href="css/style.css" type="text/css" rel="stylesheet"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="base.js"></script>
 	</head>
 	<body>
-		<div class="header">
-			<h1>
-				<img src="images/logo2.png" alt="Diis To Niis" class="logo" draggable="false"/>
-			</h1>
-		</div>
-		<nav class="nav">
-			<div id="navList" class="nav__links">
-				<a class="nav__link" href="operations.html" id = "btnNav" onMouseOver="over(this)" onMouseOut="normal(this)">
-					<i class="icon-operations icon-details"></i>
-					Operations
-				</a>
-				<a class="nav__link nav__link--active" href="convert.html" id = "btnNav1">
-					<i class="icon-convert icon-details"></i>
-					Convert
-				</a>
-				<a class="nav__link" href="history.html" id = "btnNav2" onMouseOver="over(this)" onMouseOut="normal(this)">
-					<i class="icon-history icon-details"></i>
-					History
-				</a>
+		<div>
+			<div class="header">
+				<h1>
+					<img src="images/logo2.png" alt="Diis To Niis" class="logo" draggable="false"/>
+				</h1>	
 			</div>
-		</nav>
-		<div class="sideInput outline">
-			<h2>DIIS</h2>
-			<div class="hold">
-    			<label for="host" >Host</label>
-    			<input id="host" type="text" max="1000"/>
-  			</div>
-			<div class="hold">
-    			<label for="port" >Port</label>
-    			<input id="port" type="text" max="1000"/>
-  			</div>
-			<h2>NIIS</h2>
-			<div class="hold">
-    			<label for="url" >URL</label>
-    			<input id="url" type="text" max="1000"/>
-  			</div>
-		</div>
-		<div class="screen">
-			<div class="leftConvert">
-				<form class="formStyle">
-					<p class="pUpdate">DIIS Request</p>
-					<textarea class = "textAreaStyle outline" type="text" name="diisRequest" id="diisRequest" cols="60" rows="18"></textarea>
-				</form>
-				<!--
-				<form class="buttonForm">
-					<button class="buttonStyle">Convert DIIS to NIIS</button>
-					<i class="buttonImage"></i>
-				</form> -->
-				<a class="customB" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)" id="b1">
-					<i class="buttonStyle icon-details" id="icon1"></i>
-					Convert DIIS to NIIS
-				</a>
-				<form>
-					<p class="pUpdate">NIIS Json Request</p>
-					<textarea class = "textAreaStyle outline" name="niisJsonRequest" cols="60" rows="18"></textarea>
-				</form>
+			<nav class="nav">
+				<div id="navList" class="nav__links">
+					<a class="nav__link" href="operations.html" id = "btnNav" onMouseOver="over(this)" onMouseOut="normal(this)">
+						<i class="icon-operations icon-details"></i>
+							Operations
+					</a>
+					<a class="nav__link nav__link--active" href="convert.html" id = "btnNav1">
+						<i class="icon-convert icon-details"></i>
+							Convert
+					</a>
+					<a class="nav__link" href="history.html" id = "btnNav2" onMouseOver="over(this)" onMouseOut="normal(this)">
+						<i class="icon-history icon-details"></i>
+							History
+					</a>
+				</div>
+			</nav>
+			<div class="sideInput outline">
+				<h2>DIIS</h2>
+				<div class="hold">
+					<label for="host" >Host</label>
+					<input id="host" type="text" max="1000"/>
+				</div>
+				<div class="hold">
+					<label for="port" >Port</label>
+					<input id="port" type="text" max="1000"/>
+				</div>
+				<h2>NIIS</h2>
+				<div class="hold">
+					<label for="url" >URL</label>
+					<input id="url" type="text" max="1000"/>
+				</div>
 			</div>
-			<div class="middle"> 
-				<a class="customMiddle" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b2">
-					<i class="icon-details middle1" id="icon2"></i>
-					Submit to DIIS Host
-				</a>
-				<a class="customMiddle" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b3">
-					<i class="icon-details middle1" id="icon3"></i>
-					Submit to NIIS Service
-				</a>
-			</div>
-			<div class="leftConvert">
-				<form class="formStyle">
-					<p class="pUpdate">DIIS Response</p>
-					<textarea class = "textAreaStyle outline" type="text" name="diisResponse" id="diisResponse" cols="60" rows="18"></textarea>
-				</form>
-				<!--
-				<form class="buttonForm">
-					<button class="buttonStyle">Convert DIIS to NIIS</button>
-					<i class="buttonImage"></i>
-				</form> -->
-				<a class="customB" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)"  id="b4">
-					<i class="icon-details buttonStyle" id="icon4"></i>
-					Convert DIIS to NIIS
-				</a>
-				<form>
-					<p class="pUpdate">NIIS Json Response</p>
-					<textarea class = "textAreaStyle outline" name="niisJsonResponset" cols="60" rows="18"></textarea>
-				</form>
+			<div class="screen outline">
+				<div class="leftConvert">
+					<form>
+						<p class="pUpdate">DIIS Request</p>
+						<textarea class = "textAreaStyle outline" type="text" name="diisRequest" id="diisRequest" cols="60" rows="4"></textarea>
+					</form>
+					<form>
+					<a class="customB" href="#" onMouseOver="overs(this,this.id)" onMouseOut="normals(this,this.id)" id="b1">
+						<i class="buttonStyle icon-details" id="icon1"></i>
+						Convert DIIS to NIIS
+					</a>
+					</form>
+					<form>
+						<p class="pUpdate">NIIS Json Request</p>
+						<textarea class = "textAreaStyle outline" name="niisJsonRequest" cols="60" rows="16"></textarea>
+					</form>
+				</div>
 			</div>
 		</div>
-		<script src="base.js"></script>
 	</body>
 </html>
